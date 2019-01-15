@@ -13,6 +13,7 @@
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -66,7 +67,7 @@
         .descripcion{
             /*width: calc(100% - 320px);*/
             /*margin-right: 20px;*/
-            margin-top:10%;
+            /*margin-top:10%;*/
             background-color: #fff;
             border: 1px solid #e0e0e0;
             font-size: 14px;
@@ -146,11 +147,12 @@
             background: #6A9DD4;
             width: 100%;
             clear: both;
-            position: fixed;
+            /*position: fixed;*/
             top: 0;
             height: 4.0rem;
             z-index: 1000;
             max-width: 560px;
+            margin: 0 auto;
         }
         .site-name{
             margin: 2% 1%;
@@ -206,25 +208,43 @@
     </script>
 </amp-analytics>
 -->
+<!--Menú-->
+<header class="headerbar">
+    <div class="site-name">
+        <a href="https://www.iberempleos.es">
+            <amp-img src="https://www.iberempleos.es/img/logo.png" width="200" height="40"></amp-img>
+        </a>
+    </div>
+    <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger">☰</div>
+</header>
+<amp-sidebar id="sidebar1" layout="nodisplay" side="left">
+    <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">✕</div>
+    <ul class="sidebar">
+        <li><a href="https://www.iberempleos.es/ofertas-empleo/">Ofertas de empleo</a></li>
+        <li><a href="http://cursos.iberempleos.es/index.html">Cursos</a></li>
+        <li><a href="https://www.iberempleos.es/ayuda">Ayuda</a></li>
+    </ul>
+</amp-sidebar>
+<!--Fin Menú-->
 <div class="cuerpo_noticia">
-    <!--Menú-->
-    <header class="headerbar">
-        <div class="site-name">
-            <a href="https://www.iberempleos.es">
-                <amp-img src="https://www.iberempleos.es/img/logo.png" width="200" height="40"></amp-img>
-            </a>
-        </div>
-        <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger">☰</div>
-    </header>
-    <amp-sidebar id="sidebar1" layout="nodisplay" side="left">
-        <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">✕</div>
-        <ul class="sidebar">
-            <li><a href="https://www.iberempleos.es/ofertas-empleo/">Ofertas de empleo</a></li>
-            <li><a href="http://cursos.iberempleos.es/index.html">Cursos</a></li>
-            <li><a href="https://www.iberempleos.es/ayuda">Ayuda</a></li>
-        </ul>
-    </amp-sidebar>
-    <!--Fin Menú-->
+    <!--&lt;!&ndash;Menú&ndash;&gt;-->
+    <!--<header class="headerbar">-->
+        <!--<div class="site-name">-->
+            <!--<a href="https://www.iberempleos.es">-->
+                <!--<amp-img src="https://www.iberempleos.es/img/logo.png" width="200" height="40"></amp-img>-->
+            <!--</a>-->
+        <!--</div>-->
+        <!--<div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger">☰</div>-->
+    <!--</header>-->
+    <!--<amp-sidebar id="sidebar1" layout="nodisplay" side="left">-->
+        <!--<div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">✕</div>-->
+        <!--<ul class="sidebar">-->
+            <!--<li><a href="https://www.iberempleos.es/ofertas-empleo/">Ofertas de empleo</a></li>-->
+            <!--<li><a href="http://cursos.iberempleos.es/index.html">Cursos</a></li>-->
+            <!--<li><a href="https://www.iberempleos.es/ayuda">Ayuda</a></li>-->
+        <!--</ul>-->
+    <!--</amp-sidebar>-->
+    <!--&lt;!&ndash;Fin Menú&ndash;&gt;-->
     <amp-consent id="myUserConsent"
                  layout="nodisplay">
         <script type="application/json">
