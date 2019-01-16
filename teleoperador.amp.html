@@ -26,7 +26,7 @@
         body{
             color: #3c3c3c;
             width: 100%;
-            align-content: center;
+
             font-family: 'Droid Sans',sans-serif;
             font-size: 15px;
             font-weight: 400;
@@ -40,6 +40,12 @@
             /*margin-left: 30%;*/
             text-align: center;
         }
+        ._h1{
+            font-size: 1.6em;
+            /*margin: 0;*/
+            color: #111;
+            /*line-height: 32px;*/
+        }
         .cuerpo_noticia{
             max-width: 560px;
             margin: 0 auto;
@@ -48,11 +54,29 @@
             font-weight: bold;
         }
         #myUserConsent{
-            max-width: 320px;
+            /*max-width: 320px;
             margin: 0 auto;
-            position: relative;
-            background-color: white;
-            padding: 3%;
+            position: relative;*/
+            /*background-color: white;*/
+            /*padding: 3%;*/
+        }
+        amp-consent {
+            position: fixed;
+            bottom: 0;
+            /*left: 0;*/
+            overflow: hidden;
+            background: hsla(0,0%,100%,0.7);
+            width: 100%;
+            z-index: 2147483645;
+        }
+        amp-consent>* {
+            max-height: 100vh;
+            width: 560px;
+            margin: 0 auto;
+        }
+        .consentPopup{
+            background: #f8f8f8;
+            padding: 20px;
         }
         .ampstart-btn{
             background-color: #6a9dd4;
@@ -73,6 +97,7 @@
             font-size: 14px;
             padding: 2%;
             /*width-max: 300px;*/
+            align-content: center;
         }
         .bordeRojo{
             border: 1px solid red;
@@ -179,6 +204,23 @@
         .redesSociales{
             float: left;
         }
+        #cabeceraEmpl{
+            background-color: #D2DAF0;
+        }
+        #cabeceraEmpl p{
+            padding: 0 2%;
+        }
+        #estrellas{
+            padding: 0 2%;
+            margin: -20px 0 0 0;
+        }
+        #empresa .empresa{
+            font-size: 1.2em;
+            margin-bottom: -1%;
+        }
+        #empresa .sitio{
+
+        }
 
 
 
@@ -226,51 +268,51 @@
     </ul>
 </amp-sidebar>
 <!--Fin Menú-->
-<div class="cuerpo_noticia">
-    <!--&lt;!&ndash;Menú&ndash;&gt;-->
-    <!--<header class="headerbar">-->
-        <!--<div class="site-name">-->
-            <!--<a href="https://www.iberempleos.es">-->
-                <!--<amp-img src="https://www.iberempleos.es/img/logo.png" width="200" height="40"></amp-img>-->
-            <!--</a>-->
-        <!--</div>-->
-        <!--<div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger">☰</div>-->
-    <!--</header>-->
-    <!--<amp-sidebar id="sidebar1" layout="nodisplay" side="left">-->
-        <!--<div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">✕</div>-->
-        <!--<ul class="sidebar">-->
-            <!--<li><a href="https://www.iberempleos.es/ofertas-empleo/">Ofertas de empleo</a></li>-->
-            <!--<li><a href="http://cursos.iberempleos.es/index.html">Cursos</a></li>-->
-            <!--<li><a href="https://www.iberempleos.es/ayuda">Ayuda</a></li>-->
-        <!--</ul>-->
-    <!--</amp-sidebar>-->
-    <!--&lt;!&ndash;Fin Menú&ndash;&gt;-->
-    <amp-consent id="myUserConsent"
-                 layout="nodisplay">
-        <script type="application/json">
-            {
-                "consents": {
-                    "consent1": {
-                        "checkConsentHref": "https://ampbyexample.com/samples_templates/consent/getConsent",
-                        "promptUI": "consentDialog"
-                    }
+
+<amp-consent id="myUserConsent"
+             layout="nodisplay">
+    <script type="application/json">
+        {
+            "consents": {
+                "consent1": {
+                    "checkConsentHref": "https://ampbyexample.com/samples_templates/consent/getConsent",
+                    "promptUI": "consentDialog"
                 }
             }
-        </script>
-        <div class="popupOverlay" id="consentDialog">
-            <div class="consentPopup">
-                <!--<div class="dismiss-button"-->
-                <!--role="button"-->
-                <!--tabindex="0"-->
-                <!--on="tap:myUserConsent.dismiss">X</div>-->
-                <div class="h2 m1">Políticas de Cookies</div>
-                <p class="m1">
-                    Utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarte publicidad. Al utilizarlos, usted acepta el uso de cookies.
-                </p>
-                <button on="tap:myUserConsent.accept" class="ampstart-btn ampstart-btn-secondary caps mx1">Entendido</button>
-            </div>
+        }
+    </script>
+    <div class="popupOverlay" id="consentDialog">
+        <div class="consentPopup">
+            <!--<div class="dismiss-button"-->
+            <!--role="button"-->
+            <!--tabindex="0"-->
+            <!--on="tap:myUserConsent.dismiss">X</div>-->
+            <div class="h2 m1">Políticas de Cookies</div>
+            <p class="m1">
+                Utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarte publicidad. Al utilizarlos, usted acepta el uso de cookies.
+            </p>
+            <button on="tap:myUserConsent.accept" class="ampstart-btn ampstart-btn-secondary caps mx1">Entendido</button>
         </div>
-    </amp-consent>
+    </div>
+</amp-consent>
+<div class="cuerpo_noticia">
+    <div id="cabeceraEmpl">
+        <p class="_h1 negrita">Teleoperador(H/M)</p>
+        <div id="estrellas">
+            <amp-img src="https://www.iberempleos.es/img/estrella.png" width="10" height="10" class="iconoEstrella"></amp-img>
+            <amp-img src="https://www.iberempleos.es/img/estrella.png" width="10" height="10" class="iconoEstrella"></amp-img>
+            <amp-img src="https://www.iberempleos.es/img/estrella.png" width="10" height="10" class="iconoEstrella"></amp-img>
+            <amp-img src="https://www.iberempleos.es/img/estrella.png" width="10" height="10" class="iconoEstrella"></amp-img>
+            <amp-img src="https://www.iberempleos.es/img/estrella.png" width="10" height="10" class="iconoEstrella"></amp-img>
+        </div>
+        <div id="empresa">
+
+            <a href="https://www.iberempleos.es/ofertas-empleo/manpower">
+                <p class="empresa">Manpower</p>
+            </a>
+            <p class="sitio">Cornellà, Barcelona</p>
+        </div>
+    </div>
 
     <div id="descripcion" class="descripcion">
         <div id= "resumen" class="resumen">
